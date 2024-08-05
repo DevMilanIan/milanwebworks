@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Quantify';
+  font-weight: 600;
+  font-display: block;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  src: url('../fonts/Quantify.ttf') format('tff');
+}
+
+@font-face {
+  font-family: 'SourceSans';
+  font-weight: 300;
+  font-display: block;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  src: url('../fonts/SourceSans.ttf') format('tff');
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
